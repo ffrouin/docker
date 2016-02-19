@@ -25,6 +25,13 @@ Then, you may deploy the shipyard-management script wherever you like :
 
 /etc/init.d or maybe /opt/docker.
 
+# How to deploy it
+
+	git clone https://github.com/ffrouin/docker
+	cd docker/shipyard
+	sudo make install
+	./shipyard-management
+
 # How does it work
 
 Usage: ./shipyard-management controller <deploy|status|stop|start>
@@ -51,4 +58,6 @@ export DOCKER_TLS_VERIFY=1
 mkdir -p ~/.docker
 cd ~/.docker && tar xjvf /path/to/<controller-hostname>-shipyard-cluster-certs.tar.bz2
 
- 
+# How to remove it
+
+	sudo make clean
