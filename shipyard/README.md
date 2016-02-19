@@ -48,7 +48,6 @@ Deploy with SSL feature enabled :
 	./shipyard-managment agent deploy-ssl <agent-hostname> <agent-ip> <controller-ip>
 
 Before to launch Agent SSL deployment, copy agent cert files
-
 from the controller host in :
 
 	/opt/docker/admin/<controller-hostname>-shipyard-agent-certs.tar.bz2
