@@ -1,5 +1,4 @@
-# docker
-Shipyard
+# Docker
 
 ## Shipyard Management Script
 Shipyard is a great initiative in order to allow end-users to access
