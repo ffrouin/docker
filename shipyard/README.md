@@ -35,27 +35,23 @@ Then, you may deploy the shipyard-management script wherever you like :
 
 ### Simple usage
 
-Usage: ./shipyard-management controller <deploy|status|stop|start>
-
-       ./shipyard-management agent deploy <controller-ip>
-
-       ./shipyard-management agent <status|start|stop>
-
-       ./shipyard-management remove
+	Usage:  ./shipyard-management controller <deploy|status|stop|start>
+		./shipyard-management agent deploy <controller-ip>
+		./shipyard-management agent <status|start|stop>
+		./shipyard-management remove
 
 ### SSL usage
 
 Deploy with SSL feature enabled :
 
-./shipyard-management controller deploy-ssl <controller-hostname> <controller-ip>
-
-./shipyard-management agent deploy-ssl <agent-hostname> <agent-ip> <controller-ip>
+	./shipyard-management controller deploy-ssl <controller-hostname> <controller-ip>
+	./shipyard-management agent deploy-ssl <agent-hostname> <agent-ip> <controller-ip>
 
 Before to launch Agent SSL deployment, copy agent cert files
 
 from the controller host in :
 
-/opt/docker/admin/<controller-hostname>-shipyard-agent-certs.tar.bz2
+	/opt/docker/admin/<controller-hostname>-shipyard-agent-certs.tar.bz2
 
 and uncompress it to /opt/docker/certs on docker agent host.
 
@@ -63,7 +59,7 @@ You'll find as well an archive to help certs deployment to your
 
 admin console. You'll find it on shipyard controller in :
 
-/opt/docker/admin/<controller-hostname>-shipyard-cluster-certs.tar.bz2
+	/opt/docker/admin/<controller-hostname>-shipyard-cluster-certs.tar.bz2
 
 ### Cluster control
 
