@@ -1,18 +1,18 @@
 # docker
 Shipyard
 
-# Shipyard Management Script
+## Shipyard Management Script
 Shipyard is a great initiative in order to allow end-users to access
 their docker infrastructure though a Web User Interface. This tool
 intend to help end-users to deploy and manage their docker/shipyard
 infrastructure.
 
-# Features
+### Features
 * deploy/remove controllers and agents
 * build certs packages on controllers to simplify TLS deployment
 * start/stop/status of controllers and agents
 
-# Architecture
+### Architecture
 /opt/docker (application root dir : users from docker groups will
 be allowed to write in this directory)
 
@@ -25,14 +25,16 @@ Then, you may deploy the shipyard-management script wherever you like :
 
 /etc/init.d or maybe /opt/docker.
 
-# How to deploy it
+## How to deploy it
 
 	git clone https://github.com/ffrouin/docker
 	cd docker/shipyard
 	sudo make install
 	./shipyard-management
 
-# How does it work
+## How does it work
+
+### Simple usage
 
 Usage: ./shipyard-management controller <deploy|status|stop|start>
 
@@ -41,6 +43,8 @@ Usage: ./shipyard-management controller <deploy|status|stop|start>
        ./shipyard-management agent <status|start|stop>
 
        ./shipyard-management remove
+
+### SSL usage
 
 Deploy with SSL feature enabled :
 
@@ -62,6 +66,8 @@ admin console. You'll find it on shipyard controller in :
 
 /opt/docker/admin/<controller-hostname>-shipyard-cluster-certs.tar.bz2
 
+### Cluster control
+
 To take cluster control from your console :
 
 	export DOCKER_HOST=tcp://<swarm-node-ip>:3376
@@ -69,6 +75,6 @@ To take cluster control from your console :
 	mkdir -p ~/.docker
 	cd ~/.docker && tar xjvf /path/to/<controller-hostname>-shipyard-cluster-certs.tar.bz2
 
-# How to remove it
+## How to remove it
 
 	sudo make clean
