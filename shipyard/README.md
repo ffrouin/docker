@@ -24,6 +24,9 @@ Then, you may deploy the shipyard-managment script wherever you like :
 
 /etc/init.d or maybe /opt/docker.
 
+In order shipyard to start automatically on system boot you should call
+shipyard-managment script from /etc/rc.local.
+
 ## How to deploy it
 
 First you need Docker, If you don't have it installed on your system
