@@ -4,7 +4,7 @@ install:
 	chmod 775 /opt/docker
 	cp lib/shipyard /opt/docker/
 	chmod 755 /opt/docker/shipyard
-	echo "You can now run the shipyard-management script !"
+	echo "You can now run the shipyard-managment script !"
 
 clean:
 	rm -rf /opt/docker
