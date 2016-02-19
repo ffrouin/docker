@@ -1,4 +1,4 @@
-# Docker
+# Docker on GNU/Linux systems
 
 ## Shipyard Managment Script
 Shipyard is a great initiative in order to allow end-users to access
@@ -25,6 +25,14 @@ Then, you may deploy the shipyard-managment script wherever you like :
 /etc/init.d or maybe /opt/docker.
 
 ## How to deploy it
+
+First you need Docker, If you don't have it installed on your system
+you may try this:
+	wget -qO- https://get.docker.com/ | sh
+
+Previous script will launch key repository import, will make architecture checks (docker is not supported on 32bits arch), and will deploy required packages in order the docker service to run. A docker group has been added on the system during installation. You may add to this group any user claiming to manipulate docker objects on this system. This group has root privileges through the docker framework, it implies you to be concerned about security threats against this system group and its members.
+
+Then, you may be ready for this :
 
 	git clone https://github.com/ffrouin/docker
 	cd docker/shipyard
