@@ -96,7 +96,6 @@ deploy-ssl)
 	rm /tmp/$3-shipyard-agent-certs/*
 	cd /opt/docker/certs && tar cjvf ../admin/$3-shipyard-cluster-certs.tar.bz2 *
 	rmdir /tmp/$3-shipyard-agent-certs
-	$0 $1 status
 	;;
 deploy)
 	export ACTION=deploy
@@ -146,7 +145,6 @@ deploy-ssl)
 	export ACTION=node
 	export DISCOVERY=etcd://$5:4001
 	/opt/docker/shipyard
-	$0 $1 status
 	;;
 deploy)
 	case "$3" in
@@ -157,7 +155,6 @@ deploy)
 	export ACTION=node
 	export DISCOVERY=etcd://$3:4001
 	/opt/docker/shipyard
-	$0 $1 status
 	;;
 esac
 	;;
