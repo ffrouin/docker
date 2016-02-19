@@ -12,7 +12,7 @@ infrastructure.
 * start/stop/status of controllers and agents
 
 ### Architecture
-/opt/docker (application root dir : users from docker groups will
+/opt/docker (application root dir : users from docker group will
 be allowed to write in this directory)
 
 /opt/docker/shipyard (copy of the deploy script from shipyard-project.org
