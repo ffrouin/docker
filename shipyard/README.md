@@ -1,6 +1,6 @@
 # Docker
 
-## Shipyard Management Script
+## Shipyard Managment Script
 Shipyard is a great initiative in order to allow end-users to access
 their docker infrastructure though a Web User Interface. This tool
 intend to help end-users to deploy and manage their docker/shipyard
@@ -20,7 +20,7 @@ site plus a swarm-agent port publication)
 
 /opt/docker/certs (cert files used by containers to run TLS requests)
 
-Then, you may deploy the shipyard-management script wherever you like :
+Then, you may deploy the shipyard-managment script wherever you like :
 
 /etc/init.d or maybe /opt/docker.
 
@@ -29,23 +29,23 @@ Then, you may deploy the shipyard-management script wherever you like :
 	git clone https://github.com/ffrouin/docker
 	cd docker/shipyard
 	sudo make install
-	./shipyard-management
+	./shipyard-managment
 
 ## How does it work
 
 ### Simple usage
 
-	Usage:  ./shipyard-management controller <deploy|status|stop|start>
-		./shipyard-management agent deploy <controller-ip>
-		./shipyard-management agent <status|start|stop>
-		./shipyard-management remove
+	Usage:  ./shipyard-managment controller <deploy|status|stop|start>
+		./shipyard-managment agent deploy <controller-ip>
+		./shipyard-managment agent <status|start|stop>
+		./shipyard-managment remove
 
 ### SSL usage
 
 Deploy with SSL feature enabled :
 
-	./shipyard-management controller deploy-ssl <controller-hostname> <controller-ip>
-	./shipyard-management agent deploy-ssl <agent-hostname> <agent-ip> <controller-ip>
+	./shipyard-managment controller deploy-ssl <controller-hostname> <controller-ip>
+	./shipyard-managment agent deploy-ssl <agent-hostname> <agent-ip> <controller-ip>
 
 Before to launch Agent SSL deployment, copy agent cert files
 
