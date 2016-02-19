@@ -1,0 +1,190 @@
+#!/bin/bash
+#
+# shipyard: script used to deploy/remove and manage shipyard
+#           components.
+#
+# author:   freddy@linuxtribe.fr
+# date:     Fri Feb 12 19:08:45 CET 2016
+# release:  0.2
+#
+# Changelog:
+# 0.2: TLS (http://darrellbreeden.kinja.com/building-docker-the-scale-of-enterprise-1751723343)
+# 0.1: init
+
+function usage {
+	simpleUsage;
+	exit 1;
+}
+
+function simpleUsage {
+	echo "Usage: $0 controller <deploy|status|stop|start>"
+	echo "       $0 agent deploy <controller-ip>"
+	echo "       $0 agent <status|start|stop>"
+	echo "       $0 remove"
+	echo 
+        echo "Deploy with SSL feature enabled :"
+	echo "$0 controller deploy-ssl <controller-hostname> <controller-ip>"
+	echo "$0 agent deploy-ssl <agent-hostname> <agent-ip> <controller-ip>"
+}
+
+function extendedUsage {
+	simpleUsage
+	echo
+	echo "Before to launch Agent SSL deployment, copy agent cert files"
+	echo "from the controller host in :"
+	echo "/opt/docker/admin/<controller-hostname>-shipyard-agent-certs.tar.bz2"
+	echo "and uncompress it to /opt/docker/certs on docker agent host."
+	echo
+	echo "You'll find as well an archive to help certs deployment to your"
+	echo "admin console. You'll find it on shipyard controller in :"
+	echo "/opt/docker/admin/<controller-hostname>-shipyard-cluster-certs.tar.bz2"
+	echo
+	echo "To take cluster control from your console :"
+	echo "export DOCKER_HOST=tcp://<swarm-node-ip>:3376"
+	echo "export DOCKER_TLS_VERIFY=1"
+	echo "mkdir -p ~/.docker"
+	echo "cd ~/.docker && tar xjvf /path/to/<controller-hostname>-shipyard-cluster-certs.tar.bz2"
+	echo
+	exit 1;
+}
+
+function DockerStart {
+	echo -n "Docker Start : "
+	docker start $1
+}
+
+function DockerStop {
+	echo -n "Docker Stop : "
+	docker stop $1
+}
+
+function DockerStatus {
+	echo -n "Status Docker $1 : "
+	r=$(docker ps -a |grep $1|grep Up|awk '{print $1}')
+        if [ -z "$r" ]; then
+		echo "	stopped"
+	else
+		echo "	started ($r)"
+	fi
+}
+
+case "$1" in
+-h|--help)
+	extendedUsage
+	;;
+remove)
+        rm /opt/docker/certs/*
+	export ACTION=remove
+	/opt/docker/shipyard
+	;;
+controller)
+	case "$2" in
+deploy-ssl)
+	mkdir -p /opt/docker/certs
+	mkdir -p /opt/docker/admin
+	cd /opt/docker && docker run --rm -v $(pwd)/certs:/certs ehazlett/certm \
+                                     -d /certs bundle generate -o shipyard \
+                                     --host proxy --host $3 --host $4
+	export TLS_CERT_PATH=/opt/docker/certs
+	export ACTION=deploy
+	/opt/docker/shipyard
+	mkdir /tmp/$3-shipyard-agent-certs
+	cp /opt/docker/certs/* /tmp/$3-shipyard-agent-certs
+	rm /tmp/$3-shipyard-agent-certs/server-key.pem
+	rm /tmp/$3-shipyard-agent-certs/server.pem
+	cd /tmp/$3-shipyard-agent-certs && tar cjvf /opt/docker/admin/$3-shipyard-agent-certs.tar.bz2 *
+	rm /tmp/$3-shipyard-agent-certs/*
+	cd /opt/docker/certs && tar cjvf ../admin/$3-shipyard-cluster-certs.tar.bz2 *
+	rmdir /tmp/$3-shipyard-agent-certs
+	$0 $1 status
+	;;
+deploy)
+	export ACTION=deploy
+	/opt/docker/shipyard
+	$0 $1 status
+	;;
+stop)
+	DockerStop shipyard-controller
+	DockerStop shipyard-swarm-agent
+	DockerStop shipyard-swarm-manager
+	DockerStop shipyard-proxy
+	DockerStop shipyard-certs
+	DockerStop shipyard-discovery
+	DockerStop shipyard-rethinkdb
+	;;
+start)
+	DockerStart shipyard-rethinkdb
+	DockerStart shipyard-discovery
+	DockerStart shipyard-certs
+	DockerStart shipyard-proxy
+	DockerStart shipyard-swarm-manager
+	DockerStart shipyard-swarm-agent
+	DockerStart shipyard-controller
+	;;
+status)
+	DockerStatus shipyard-controller
+	DockerStatus shipyard-swarm-agent
+	DockerStatus shipyard-swarm-manager
+	DockerStatus shipyard-proxy
+	DockerStatus shipyard-certs
+	DockerStatus shipyard-discovery
+	DockerStatus shipyard-rethinkdb
+	;;
+*)
+	usage
+	;;
+esac
+	;;
+agent)
+	case "$2" in
+deploy-ssl)
+	mkdir -p /opt/docker/certs
+	cd /opt/docker && docker run --rm -v $(pwd)/certs:/certs ehazlett/certm \
+                                     -d /certs server generate -o shipyard \
+                                     --host proxy --host $3 --host $4
+	export TLS_CERT_PATH=/opt/docker/certs
+	export ACTION=node
+	export DISCOVERY=etcd://$5:4001
+	/opt/docker/shipyard
+	$0 $1 status
+	;;
+deploy)
+	case "$3" in
+'')
+	usage
+	;;
+*)
+	export ACTION=node
+	export DISCOVERY=etcd://$3:4001
+	/opt/docker/shipyard
+	$0 $1 status
+	;;
+esac
+	;;
+stop)
+        DockerStop shipyard-swarm-agent
+        DockerStop shipyard-swarm-manager
+        DockerStop shipyard-proxy
+        DockerStop shipyard-certs
+        ;;
+start)
+        DockerStart shipyard-certs
+        DockerStart shipyard-proxy
+        DockerStart shipyard-swarm-manager
+        DockerStart shipyard-swarm-agent
+        ;;
+status)
+        DockerStatus shipyard-swarm-agent
+        DockerStatus shipyard-swarm-manager
+        DockerStatus shipyard-proxy
+        DockerStatus shipyard-certs
+        ;;
+*)
+	usage
+        ;;
+esac
+        ;;
+*)
+	usage
+	;;
+esac
