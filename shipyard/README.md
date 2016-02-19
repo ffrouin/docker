@@ -1,7 +1,7 @@
 # Docker on GNU/Linux systems
 
 ## Shipyard Managment Script
-Shipyard is a great initiative in order to allow end-users to access
+[Shipyard](https://shipyard-project.com/) is a great initiative in order to allow end-users to access
 their docker infrastructure through a Web User Interface. This tool
 intend to help end-users to deploy and manage their docker/shipyard
 infrastructure.
