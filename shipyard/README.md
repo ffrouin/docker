@@ -2,7 +2,7 @@
 
 ## Shipyard Managment Script
 Shipyard is a great initiative in order to allow end-users to access
-their docker infrastructure though a Web User Interface. This tool
+their docker infrastructure through a Web User Interface. This tool
 intend to help end-users to deploy and manage their docker/shipyard
 infrastructure.
 
