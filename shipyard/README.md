@@ -15,7 +15,7 @@ infrastructure.
 /opt/docker (application root dir : users from docker group will
 be allowed to write in this directory)
 
-/opt/docker/shipyard (copy of the deploy script from shipyard-project.org
+/opt/docker/shipyard (copy of the deploy script from shipyard-project.com
 site plus a swarm-manager port publication)
 
 /opt/docker/certs (cert files used by containers to run TLS requests)
