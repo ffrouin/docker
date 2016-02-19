@@ -16,7 +16,7 @@ infrastructure.
 be allowed to write in this directory)
 
 /opt/docker/shipyard (copy of the deploy script from shipyard-project.org
-site plus a swarm-agent port publication)
+site plus a swarm-manager port publication)
 
 /opt/docker/certs (cert files used by containers to run TLS requests)
 
@@ -54,21 +54,26 @@ from the controller host in :
 	/opt/docker/admin/<controller-hostname>-shipyard-agent-certs.tar.bz2
 
 and uncompress it to /opt/docker/certs on docker agent host.
-
 You'll find as well an archive to help certs deployment to your
-
 admin console. You'll find it on shipyard controller in :
 
 	/opt/docker/admin/<controller-hostname>-shipyard-cluster-certs.tar.bz2
 
-### Cluster control
+### Docker Cluster control
 
 To take cluster control from your console :
 
-	export DOCKER_HOST=tcp://<swarm-node-ip>:3376
+	export DOCKER_HOST=tcp://<swarm-manager-ip>:3376
 	export DOCKER_TLS_VERIFY=1
 	mkdir -p ~/.docker
 	cd ~/.docker && tar xjvf /path/to/<controller-hostname>-shipyard-cluster-certs.tar.bz2
+
+just try a :
+
+	docker ps -a
+
+it should now report data from your shipyard cluster.
+
 
 ## How to remove it
 
