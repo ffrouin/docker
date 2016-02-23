@@ -1,4 +1,4 @@
-# Docker on GNU/Linux systems
+# Docker on Ubuntu 14.04 LTS systems
 
 ## Shipyard Managment Script
 [Shipyard](https://shipyard-project.com/) is a great initiative in order to allow end-users to access
