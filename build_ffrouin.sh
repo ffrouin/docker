@@ -6,3 +6,5 @@ docker build -t ffrouin:system-14.04 system-14.04
 docker build -t ffrouin:lamp-14.04 lamp-14.04
 docker build -t ffrouin:wordpress-14.04 wordpress-14.04
 
+docker build -t ffrouin:system-16.04 system-16.04
+docker build -t ffrouin:lamp-16.04 lamp-16.04
