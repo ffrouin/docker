@@ -29,12 +29,34 @@ shipyard-managment script from /etc/rc.local.
 
 ## How to deploy it
 
+### Docker on Ubuntu 14.04 LTS
+
 First you need Docker, If you don't have it installed on your system
 you may try this:
 
 	wget -qO- https://get.docker.com/ | sh
 
 Previous script will launch key repository import, will make architecture checks (docker is not supported on 32bits arch), and will deploy required packages in order the docker service to run. A docker group has been added on the system during installation. You may add to this group any user claiming to manipulate docker objects on this system. This group has root privileges through the docker framework, it implies you to be concerned about security threats against this system group and its members.
+
+#### Overlay network driver
+
+If you intend to use the overlay network driver, you'll need a TLS ready docker
+framework on each of your nodes. Overlay driver allow to declare docker
+network across different docker nodes.
+
+To allow this, you'll need your different docker nodes to exchange data
+through the network. As network access to the docker framework is equivalent
+to a system root access, you'll absolutely need to secure this by using
+TLS/SSL tcp sessions and certificate authentication.
+
+It implies you to use a system cluster service as etcd on your differents
+docker nodes. The etcd can't be dockerized as it is required by the docker
+framework on your mothers hosts.
+
+Overlay network driver requires linux kernel 3.16. You'll need to change
+your ubuntu 14.04 LTS kernel source as well.
+
+### Shipyard Managment
 
 Then, you may be ready for this :
 
@@ -81,7 +103,7 @@ To take cluster control from your console :
 
 just try a :
 
-	docker ps -a
+	docker info
 
 it should now report data from your shipyard cluster.
 
