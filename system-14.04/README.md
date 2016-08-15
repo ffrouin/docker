@@ -17,6 +17,7 @@ To access container with ssh from your workstation, you may first log from docke
 	passwd <your_login>
 
 then you might be able to run something like :
+
 	ssh -p 2222 <your_login>@<docker_host>
 
 ssh server is configured to accept RSA key authentication. Put public keys in $HOME/.ssh/authorized_keys (1 line per key).
