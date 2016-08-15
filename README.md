@@ -5,6 +5,7 @@ Docker GNU/Linux contribs
 A tool to help with shipyard deployment, especially with TLS/SSL.
 
 ## phusion/basedimage 0.9.19 linked to branch 14.04 of Ubuntu
+A very good image to start unix server containers
 
 ## ffrouin/system-14.04
 Based image for any application server running Ubuntu 14.04 LTS
