@@ -7,9 +7,11 @@ Basic system services configured for you : syslog, cron, ssh
 	docker pull ffrouin/system-14.04
 
 Run and expose container ssh port to the port of your choice, here we used 2222:
+
 	docker run -d --name "your_container_name" -p 2222:22 ffrouin/system-14.04
 
 To access container with ssh from your workstation, you may first log from docker host in order to create your user account :
+
 	docker exec -ti <your_container_name> bash
 	useradd -d /home/<your_login> -s /bin/bash -m <your_login>
 	passwd <your_login>
