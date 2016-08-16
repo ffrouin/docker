@@ -11,7 +11,7 @@ Based image for any application server running Ubuntu 16.04 LTS
 Based image for any LAMP application server running Ubuntu 16.04 LTS
 
 ## phusion/basedimage 0.9.19 linked to branch 14.04 of Ubuntu
-A very good image to start unix server containers
+Copy of official phusion/baseimage 0.9.19 linked to branch 14.04 of Ubuntu. From version 0.9.19, phusion/baseimage is linked to branch 16.04 of Ubuntu.
 
 ## ffrouin/system-14.04
 Based image for any application server running Ubuntu 14.04 LTS
