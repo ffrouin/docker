@@ -30,3 +30,12 @@ Based image for Wordpress application server running Ubuntu 14.04 LTS
 
 ## ffrouin/desktop-14.04
 Based image for X2Go/XFCE application server running Ubuntu 14.04 LTS
+
+## ffrouin/desktop-14.04-fr
+Based image for X2Go/XFCE application server running Ubuntu 14.04 LTS - French
+
+## ffrouin/laurux-db-14.04
+Based image for Laurux SQL database running Ubuntu 14.04 LTS
+
+## ffrouin/laurux-desktop-14.04
+Based image for Laurux application running Ubunu 14.04 LTS
