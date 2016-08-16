@@ -1,0 +1,1 @@
+docker run --name "desktop-16.04" --device=/dev/snd:/dev/snd --device=/dev/mixer:/dev/mixer --device=/dev/snd/seq:/dev/snd/seq --privileged -d -p 2222:22 ffrouin:desktop-16.04 /sbin/my_init
