@@ -1,12 +1,12 @@
-# Docker laurux database container based on Ubuntu 14.04 LTS
+# Docker laurux database container based on Ubuntu 16.04 LTS
 
 ## How to use the container image
 
-	docker pull ffrouin/laurux-desktop-14.04
+	docker pull ffrouin/laurux-desktop-16.04
 
-We supposed you ran a ffrouin/laurux-db-14.04 image named "laurux-db-customer1" :
+We supposed you ran a ffrouin/laurux-db-16.04 image named "laurux-db-customer1" :
 
-	docker run --name "laurux-customer1" --link laurux-db-customer1:laurux-db-customer1 -d -p 2222:22 ffrouin/laurux-desktop-14.04 /sbin/my_init
+	docker run --name "laurux-customer1" --link laurux-db-customer1:laurux-db-customer1 -d -p 2222:22 ffrouin/laurux-desktop-16.04 /sbin/my_init
 
 Then, use X2Go (http://wiki.x2go.org/) to start a desktop session inside the container of your docker host :
 

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Laurux
+Comment=
+Exec=/opt/Laurux/Laurux3/Laurux3.gambas
+Icon=/usr/share/icons/laurux.png
+Path=
+Terminal=false
+StartupNotify=false
+

@@ -1,0 +1,1 @@
+docker run --name "laurux-16.04" --link laurux-db-16.04:laurux-db-16.04 -d -p 2223:22 ffrouin:laurux-desktop-16.04 /sbin/my_init

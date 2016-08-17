@@ -1,0 +1,1 @@
+docker run -d --name "laurux-db-16.04" -p 8888:80 ffrouin:laurux-db-16.04 /sbin/my_init
