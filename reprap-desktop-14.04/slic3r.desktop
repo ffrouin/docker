@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=slic3r
+Comment=
+Exec=/opt/Slic3r/slic3r.pl
+Icon=/opt/Slic3r/var/Slic3r.png
+Path=
+Terminal=false
+StartupNotify=false

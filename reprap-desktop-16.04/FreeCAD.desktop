@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=FreeCAD
+Comment=Feature based Parametric Modeler
+Exec=/usr/bin/freecad %F
+Icon=/usr/share/freecad/freecad.xpm
+Path=
+Terminal=false
+StartupNotify=false

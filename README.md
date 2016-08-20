@@ -23,7 +23,10 @@ Based image for X2Go/XFCE application server running Ubuntu 16.04 LTS - French
 Based image for Laurux SQL database running Ubuntu 16.04 LTS
 
 ## ffrouin/laurux-desktop-16.04
-Based image for Laurux application running Ubunu 16.04 LTS
+Based image for Laurux application running Ubuntu 16.04 LTS
+
+## ffrouin/reprap-desktop-16.04
+Based image for Reprap application running Ubuntu 16.04 LTS
 
 ## phusion/basedimage 0.9.19 linked to branch 14.04 of Ubuntu
 Copy of official phusion/baseimage 0.9.19 linked to branch 14.04 of Ubuntu. From version 0.9.19, phusion/baseimage is linked to branch 16.04 of Ubuntu.
@@ -48,3 +51,7 @@ Based image for Laurux SQL database running Ubuntu 14.04 LTS
 
 ## ffrouin/laurux-desktop-14.04
 Based image for Laurux application running Ubunu 14.04 LTS
+
+## ffrouin/reprap-desktop-14.04
+Based image for Reprap application running Ubuntu 14.04 LTS
+

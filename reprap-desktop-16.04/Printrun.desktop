@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Printrun
+Comment=
+Exec=/opt/Printrun/pronterface.py
+Icon=/opt/Printrun/pronterface.png
+Path=
+Terminal=false
+StartupNotify=false
