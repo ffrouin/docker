@@ -56,3 +56,8 @@ Here is what you need to do, launch a terminal and run the following commands :
 
 freddy : container support and maintenance (rsa key authentication)
 
+--
+
+Sources : https://github.com/ffrouin/docker
+Support : Freddy Frouin http://freddy.linuxtribe.fr
+
