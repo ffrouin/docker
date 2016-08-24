@@ -1,9 +1,9 @@
 # ffrouin/reprap-desktop-14.04
 
 ffrouin/reprap-desktop-14.04 is based on ffrouin/desktop-14.04 and provides following applications :
-   - Arduino v1.0.5 : https://www.arduino.cc/
-   - Openscad v2014.01.29 : http://www.openscad.org/
-   - Freecad v0.14 : http://www.freecadweb.org/
+   - Arduino v1.6.11 : https://www.arduino.cc/
+   - Openscad v2015.03-1 : http://www.openscad.org/
+   - Freecad v0.16 : http://www.freecadweb.org/
    - Printun v2015.03.10 : http://reprap.org/wiki/Printrun
    - Slic3r v1.3.0-dev : http://slic3r.org/
 
