@@ -14,9 +14,15 @@ ENV TERM vt100
 
 CMD ["/sbin/my_init"]
 
+RUN add-apt-repository ppa:openscad/releases
+RUN add-apt-repository ppa:freecad-maintainers/freecad-stable
 RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold"
 RUN apt-get install -y freeglut3 mesa-utils libgl1-mesa-dri
-RUN apt-get install -y arduino openscad freecad --no-install-recommends
+RUN apt-get install -y openscad freecad --no-install-recommends
+RUN apt-get install -y xz-utils
+
+COPY arduino-1.6.11-linux64.tar.xz /opt/arduino-1.6.11-linux64.tar.xz
+RUN cd /opt && tar xvf arduino-1.6.11-linux64.tar.xz && cd arduino-1.6.11 && ./install.sh
 
 # arduino app requirement
 RUN adduser freddy dialout
@@ -52,9 +58,8 @@ RUN cd /opt/Printrun && python setup.py build_ext --inplace
 
 COPY *.desktop /home/freddy/Desktop/
 COPY Readme.txt /home/freddy/Desktop/Readme.txt
-RUN chown freddy:freddy /home/freddy/Desktop/Readme.txt
 RUN chmod +x /home/freddy/Desktop/*.desktop
-RUN chown freddy:freddy /home/freddy/Desktop/*.desktop
+RUN chown -R freddy:freddy /home/freddy/Desktop/
 
 # cleaning
 

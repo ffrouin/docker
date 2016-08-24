@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=arduino
+Comment=
+Exec=/opt/arduino-1.6.11/arduino
+Icon=/opt/arduino-1.6.11/lib/arduino.png
+Path=
+Terminal=false
+StartupNotify=false

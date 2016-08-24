@@ -31,7 +31,6 @@ RUN mkdir /etc/service/mysql/supervise
 RUN echo "#!/bin/bash" > /etc/service/mysql/run
 RUN echo "set -e" >> /etc/service/mysql/run
 RUN echo "exec /usr/sbin/mysqld" >> /etc/service/mysql/run
-RUN echo "exec /usr/bin/mysqladmin password admin" >> /etc/service/mysql/run
 RUN chmod +x /etc/service/mysql/run
 
 RUN perl -pi -e 's/^exit 0/\/root\/firstrun.sh \&/' /etc/rc.local

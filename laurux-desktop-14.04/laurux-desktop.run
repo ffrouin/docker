@@ -1,1 +1,1 @@
-docker run --name "laurux-14.04" --link laurux-db-14.04:laurux-db-14.04 -d -p 2223:22 ffrouin:laurux-desktop /sbin/my_init
+docker run --name "laurux-14.04" --link laurux-db-14.04:laurux-db-14.04 -d -p 2223:22 ffrouin:laurux-desktop-14.04 /sbin/my_init
