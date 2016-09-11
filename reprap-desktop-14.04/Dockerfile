@@ -55,6 +55,17 @@ RUN cd /opt/Printrun && python setup.py build_ext --inplace
 # X2SW Sources
 #RUN cd /opt && git clone --recurse https://github.com/dob71/x2swn.git
 
+# Cura
+RUN apt-get install -y libgfortran3 libpython3.4 --no-install-recommends
+COPY Cura-2.1.1-Linux.deb /root/
+RUN dpkg -i /root/Cura-2.1.1-Linux.deb
+
+# RepetierHost
+COPY repetierHostLinux_1_6_2.tgz /root/
+RUN cd /opt && tar xzvf /root/repetierHostLinux_1_6_2.tgz
+RUN perl -pi -e 's/apt-get install/apt-get install -y --no-install-recommends/g' /opt/RepetierHost/configureFirst.sh
+RUN cd /opt/RepetierHost && sh ./configureFirst.sh
+
 COPY *.desktop /home/freddy/Desktop/
 COPY Readme.txt /home/freddy/Desktop/Readme.txt
 RUN chmod +x /home/freddy/Desktop/*.desktop

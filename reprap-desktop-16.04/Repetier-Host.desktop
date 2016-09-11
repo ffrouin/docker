@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Repetier-Host
+Comment=Repetier-Host 3d printer host software
+Exec=/usr/bin/mono /opt/RepetierHost/RepetierHost.exe -home /root/RepetierHost
+Icon=/opt/RepetierHost/repetier-logo.png
+Path=
+Terminal=false
+StartupNotify=true

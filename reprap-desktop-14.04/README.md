@@ -6,6 +6,8 @@ ffrouin/reprap-desktop-14.04 is based on ffrouin/desktop-14.04 and provides foll
    - Freecad v0.16 : http://www.freecadweb.org/
    - Printun v2015.03.10 : http://reprap.org/wiki/Printrun
    - Slic3r v1.3.0-dev : http://slic3r.org/
+   - Cura v2.1.1 : https://ultimaker.com/en/products/cura-software
+   - RepetierHost v1.6.2 : https://www.repetier.com/
 
 ## How to use the container image
 

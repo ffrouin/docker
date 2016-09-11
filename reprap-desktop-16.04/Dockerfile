@@ -56,6 +56,17 @@ RUN cd /opt/Printrun && python setup.py build_ext --inplace
 # X2SW Sources
 #RUN cd /opt && git clone --recurse https://github.com/dob71/x2swn.git
 
+# Cura
+RUN add-apt-repository ppa:thopiekar/cura-master
+RUN apt-get update && apt-get install -y cura
+
+# RepetierHost
+COPY repetierHostLinux_1_6_2.tgz /root/
+RUN cd /opt && tar xzvf /root/repetierHostLinux_1_6_2.tgz
+RUN perl -pi -e 's/apt-get install/apt-get install -y --no-install-recommends/g' /opt/RepetierHost/configureFirst.sh
+RUN perl -pi -e 's/libmono-winforms2.0-cil/mono-reference-assemblies-2.0 mono-devel/g' /opt/RepetierHost/configureFirst.sh
+RUN cd /opt/RepetierHost && sh ./configureFirst.sh
+
 COPY *.desktop /home/freddy/Desktop/
 COPY Readme.txt /home/freddy/Desktop/Readme.txt
 RUN chmod +x /home/freddy/Desktop/*.desktop
