@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker run -d --name "tomcat8-16.04" -p 8081:8080 ffrouin:tomcat8-16.04 /sbin/my_init

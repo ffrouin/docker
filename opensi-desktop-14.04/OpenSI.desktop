@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=OpenSI
+Comment=
+Exec=/opt/xulrunner/xulrunner-bin /opt/opensi/application.ini
+Icon=x-office-presentation
+Path=
+Terminal=false
+StartupNotify=false
+

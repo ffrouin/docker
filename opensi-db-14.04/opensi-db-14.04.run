@@ -1,0 +1,1 @@
+docker run -d --name "opensi-db-14.04" ffrouin:opensi-db-14.04 /sbin/my_init

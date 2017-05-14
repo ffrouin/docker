@@ -1,0 +1,226 @@
+-- -----------------------------------------------------------------------------
+-- OpenSi : Outils libres de gestion d'entreprise                             --
+-- Copyright (C) 2003 Speedinfo.fr S.A.R.L.                                   --
+-- Contact: contact@opensi.org                                                --
+--                                                                            --
+-- This program is free software; you can redistribute it and/or              --
+-- modify it under the terms of the GNU General Public License                --
+-- as published by the Free Software Foundation; either version 2             --
+-- of the License, or (at your option) any later version.                     --
+--                                                                            --
+-- This program is distributed in the hope that it will be useful,            --
+-- but WITHOUT ANY WARRANTY; without even the implied warranty of             --
+-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the               --
+-- GNU General Public License for more details.                               --
+--                                                                            --
+-- You should have received a copy of the GNU General Public License          --
+-- along with this program; if not, write to the Free Software                --
+-- Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA. --
+-- -----------------------------------------------------------------------------
+
+-- Affectation de la langue commerciale d'un pays
+
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ca') where Code_Pays='AD';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ar') where Code_Pays='AE';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='AG';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='AI';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='hy') where Code_Pays='AM';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='pt') where Code_Pays='AO';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='es') where Code_Pays='AR';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='AS';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='de') where Code_Pays='AT';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='AU';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='bs') where Code_Pays='BA';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='BB';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='bn') where Code_Pays='BD';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='BE';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='BF';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='bg') where Code_Pays='BG';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ar') where Code_Pays='BH';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='BI';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='BJ';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='BM';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ms') where Code_Pays='BN';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='es') where Code_Pays='BO';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='pt') where Code_Pays='BR';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='BS';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='dz') where Code_Pays='BT';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='BW';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='BZ';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='CA';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='CC';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='CD';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='CF';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='CG';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='CH';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='CI';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='CK';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='es') where Code_Pays='CL';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='CM';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='es') where Code_Pays='CO';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='es') where Code_Pays='CR';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='es') where Code_Pays='CU';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='pt') where Code_Pays='CV';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='CX';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='el') where Code_Pays='CY';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='cs') where Code_Pays='CZ';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='de') where Code_Pays='DE';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='da') where Code_Pays='DK';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='DM';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='es') where Code_Pays='DO';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ar') where Code_Pays='DZ';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='es') where Code_Pays='EC';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='et') where Code_Pays='EE';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ar') where Code_Pays='EG';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ar') where Code_Pays='EH';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ar') where Code_Pays='ER';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='es') where Code_Pays='ES';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='am') where Code_Pays='ET';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fi') where Code_Pays='FI';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='FJ';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='FK';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='FM';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='da') where Code_Pays='FO';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='FR';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='GA';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='GB';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='GD';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ka') where Code_Pays='GE';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='GF';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='GH';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='GI';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='da') where Code_Pays='GL';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='GM';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='GN';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='GP';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='GQ';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='el') where Code_Pays='GR';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='es') where Code_Pays='GT';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='GU';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='pt') where Code_Pays='GW';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='GY';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='HK';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='es') where Code_Pays='HN';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='hr') where Code_Pays='HR';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='HT';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='hu') where Code_Pays='HU';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ar') where Code_Pays='IL';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='IN';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ar') where Code_Pays='IQ';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='is') where Code_Pays='IS';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='it') where Code_Pays='IT';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='JM';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ar') where Code_Pays='JO';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ja') where Code_Pays='JP';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='KE';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='km') where Code_Pays='KH';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='KI';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='KM';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='KN';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ko') where Code_Pays='KP';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ko') where Code_Pays='KR';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ar') where Code_Pays='KW';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='KY';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ru') where Code_Pays='KZ';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='lo') where Code_Pays='LA';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ar') where Code_Pays='LB';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='LC';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='de') where Code_Pays='LI';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ta') where Code_Pays='LK';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='LR';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='LS';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='LU';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='lv') where Code_Pays='LV';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ar') where Code_Pays='LY';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ar') where Code_Pays='MA';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='MC';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='mo') where Code_Pays='MD';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='MG';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='MH';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='ML';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='my') where Code_Pays='MM';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='mn') where Code_Pays='MN';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='pt') where Code_Pays='MO';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='MP';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='MQ';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ar') where Code_Pays='MR';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='MS';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='MT';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='MU';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='MW';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='es') where Code_Pays='MX';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ms') where Code_Pays='MY';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='pt') where Code_Pays='MZ';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='NA';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='NC';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='NE';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='NF';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='NG';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='es') where Code_Pays='NI';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='no') where Code_Pays='NO';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='na') where Code_Pays='NR';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='NU';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='NZ';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ar') where Code_Pays='OM';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='es') where Code_Pays='PA';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='es') where Code_Pays='PE';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='PF';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='PG';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='PH';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='PK';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='pl') where Code_Pays='PL';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='PM';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='PN';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='PR';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='pt') where Code_Pays='PT';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='PW';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='es') where Code_Pays='PY';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ar') where Code_Pays='QA';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='RE';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ro') where Code_Pays='RO';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ru') where Code_Pays='RU';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='RW';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='SB';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='SC';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ar') where Code_Pays='SD';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='sv') where Code_Pays='SE';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='SG';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='SH';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='sl') where Code_Pays='SI';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='SL';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='it') where Code_Pays='SM';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='SN';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ar') where Code_Pays='SO';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='pt') where Code_Pays='ST';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='es') where Code_Pays='SV';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ar') where Code_Pays='SY';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='SZ';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='TC';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='TD';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='TG';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='th') where Code_Pays='TH';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='tg') where Code_Pays='TJ';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='TK';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='pt') where Code_Pays='TL';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='tk') where Code_Pays='TM';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ar') where Code_Pays='TN';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='TO';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='tr') where Code_Pays='TR';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='TT';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='TV';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='TZ';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='UG';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='US';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='VC';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='es') where Code_Pays='VE';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='VG';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='VI';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='vi') where Code_Pays='VN';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='VU';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='WF';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='WS';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='ar') where Code_Pays='YE';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='fr') where Code_Pays='YT';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='ZA';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='ZM';
+update PAYS set Langue=(select Langue_Id from LANGUE where Code_ISO='en') where Code_Pays='ZW';

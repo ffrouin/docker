@@ -1,0 +1,1 @@
+docker run --name "opensi-desktop-14.04" --link opensi-server-14.04:opensi-server-14.04 -d -p 2216:22 ffrouin:opensi-desktop-14.04 /sbin/my_init

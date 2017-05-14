@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker run -d --name "opensi-server-14.04" --link opensi-db-14.04:opensi-db-14.04 ffrouin:opensi-server-14.04 /sbin/my_init
