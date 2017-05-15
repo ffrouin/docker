@@ -32,7 +32,7 @@ Base image for Laurux application running Ubuntu 16.04 LTS
 Base image for OpenSI SQL databse running Ubuntu 16.04 LTS
 
 ## ffrouin/opensi-server-16.04
-Base image for OpenSI application server running Ubuntu 16.04 LTS
+Base image for OpenSI 4.7.8-EC1 application server running Ubuntu 16.04 LTS
 
 ## ffrouin/opensi-desktop-16.04
 Base image for OpenSI client desktop running Ubuntu 16.04 LTS
@@ -71,7 +71,7 @@ Base image for Laurux application running Ubunu 14.04 LTS
 Base image for OpenSI SQL databse running Ubuntu 14.04 LTS
 
 ## ffrouin/opensi-server-14.04
-Base image for OpenSI application server running Ubuntu 14.04 LTS
+Base image for OpenSI 4.7.8-EC1 application server running Ubuntu 14.04 LTS
 
 ## ffrouin/opensi-desktop-14.04
 Base image for OpenSI client desktop running Ubuntu 14.04 LTS
