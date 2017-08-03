@@ -23,8 +23,8 @@ RUN echo "set -e" >> /etc/service/apache2/run
 RUN echo "exec /usr/sbin/apache2ctl -DFOREGROUND" >> /etc/service/apache2/run
 RUN chmod +x /etc/service/apache2/run
 
-RUN cd /root && wget https://github.com/ffrouin/suspicious/raw/master/suspicious_0.3-1_all.deb
-RUN dpkg -i /root/suspicious_0.3-1_all.deb
+RUN cd /root && wget https://github.com/ffrouin/suspicious/raw/master/suspicious_0.4-1_all.deb
+RUN dpkg -i /root/suspicious_0.4-1_all.deb
 RUN ln -s /usr/share/suspicious/apache/suspicious.conf /etc/apache2/conf-enabled/suspicious.conf
 
 # cleaning
